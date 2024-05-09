@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-image: url('Event_16.jpg'); /* Add your background image URL */
+  background-size: cover;
+  background-position: center;
+}
+
+.container {
+  width: 400px;
+  background-color: rgba(255, 255, 255, 0.8); /* Adjust the background color and opacity */
+  backdrop-filter: blur(10px); /* Add blur effect */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Add shadow for better visibility */
+}
+
+* {box-sizing: border-box;}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=file] {
+  width: calc(100% - 24px); /* Adjusted width to accommodate padding */
+  padding: 12px;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  width: 100%; /* Full width button */
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 0; /* Adjusted padding */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <form action="/action_page.php">
+    <label for="fname">Enter Your Account ID</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your ID..">
+
+    <label for="lname">Your Account Name</label>
+    <input type="text" id="lname" name="lastname" placeholder="Account Name..">
+
+    <label for="issue/bugs">Report an Issue/Bug</label>
+    <select id="issues" name="Issue">
+      <option value="usa">Choose Here...</option>
+      <option value="australia">Account Recovery</option>
+      <option value="canada">In Game Bugs</option>
+      <option value="usa">Report System Exploitation</option>
+      <option value="usa">Report Bots/Macros</option>
+      <option value="usa">Account Restriction</option>
+      <option value="usa">In game Purchases</option>
+      <option value="usa"></option>
+    </select>
+
+    <label for="subject">Add More Details..</label>
+    <label for="subject">(Note: If no inquiries above you can report directly below )</label>
+    <textarea id="subject" name="subject" placeholder="Required.." style="height:200px"></textarea>
+
+    <label for="file">Attach File:</label>
+    <input type="file" id="file" name="file">
+
+    <input type="submit" value="Submit">
+  </form>
+</div>
+
+</body>
+</html>
